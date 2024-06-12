@@ -20,7 +20,8 @@ namespace WebFormsApp.Presentation
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            _sessionService.GetSessionValue("")
+            _sessionService.SetSessionValue("GuidKey",Guid.NewGuid().ToString());
+            var value = _sessionService.GetSessionValue("GuidKey");
         }
     }
 }

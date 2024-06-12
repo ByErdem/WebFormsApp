@@ -256,9 +256,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Attributes\CustomAuthorize.cs" />
     <Compile Include="Models\Filter\CustomAuthorizationModule.cs" />
-    <Compile Include="Models\Filter\CustomAuthorizeFilter.cs" />
     <Compile Include="Models\Helper.cs" />
     <Compile Include="Models\Profiles\MappingProfile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
