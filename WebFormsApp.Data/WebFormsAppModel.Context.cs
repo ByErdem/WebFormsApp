@@ -26,5 +26,6 @@ namespace WebFormsApp.Data
         }
     
         public virtual DbSet<Users> Users { get; set; }
+        public virtual DbSet<Students> Students { get; set; }
     }
 }

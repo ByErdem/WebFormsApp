@@ -11,6 +11,7 @@ namespace WebFormsApp.Service.Abstract
     public interface IDBContextEntity
     {
         DbSet<Users> Users { get; set; }
+        DbSet<Students> Students { get; set; }
         Database Database { get; }
 
         int SaveChanges();

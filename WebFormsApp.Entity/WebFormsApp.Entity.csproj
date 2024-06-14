@@ -42,7 +42,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Concrete\MUser.cs" />
+    <Compile Include="Dtos\PageInfo.cs" />
     <Compile Include="Dtos\ResponseDto.cs" />
+    <Compile Include="Dtos\StudentDto.cs" />
     <Compile Include="Dtos\UserInformationsDto.cs" />
     <Compile Include="Dtos\UserLoginDto.cs" />
     <Compile Include="Dtos\UserParameter.cs" />

@@ -36,6 +36,9 @@ namespace WebFormsApp.Service.Concrete
 
         public async Task<ResponseDto<MUser>> Register(UserRegisterDto user)
         {
+            await _entity.Students.FirstOrDefaultAsync(x => x.FirstName == user.Name);
+
+
             var rsp = new ResponseDto<MUser>();
             var usr = await _entity.Users.FirstOrDefaultAsync(x => x.Username == user.Username);
             if (usr != null)

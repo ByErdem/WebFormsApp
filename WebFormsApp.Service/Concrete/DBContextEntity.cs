@@ -5,9 +5,9 @@ using WebFormsApp.Service.Abstract;
 
 namespace WebFormsApp.Service.Concrete
 {
-    public class DBContextEntity:DbContext,IDBContextEntity
+    public class DBContextEntity : DbContext, IDBContextEntity
     {
-        public DBContextEntity():base(ConnectionString()) {}
+        public DBContextEntity() : base(ConnectionString()) { }
 
         public new Database Database => base.Database;
 
@@ -29,6 +29,7 @@ namespace WebFormsApp.Service.Concrete
         }
 
         public virtual DbSet<Users> Users { get; set; }
+        public virtual DbSet<Students> Students { get; set; }
 
 
 

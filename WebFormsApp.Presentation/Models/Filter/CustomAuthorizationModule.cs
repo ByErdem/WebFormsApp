@@ -18,7 +18,8 @@ namespace WebFormsApp.Presentation.Models.Filter
         private readonly List<string> _blacklistedUrls = new List<string>
         {
             "/About",
-            // Buraya erişimin engellenmesini istediğimiz url'leri ekleyeceğiz
+            //Buraya tanımladığımız urllere sadece yetkisi olan kullanıcılar girebilir.
+
         };
 
         public void Init(HttpApplication context)

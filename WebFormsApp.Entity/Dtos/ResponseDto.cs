@@ -15,9 +15,14 @@ namespace WebFormsApp.Entity.Dtos
         public string ErrorMessage { get; set; }
         public List<string> ErrorMessages { get; set; } // Birden fazla hata mesajı için
 
+        // Sayfalama ile ilgili alanlar
+        public int TotalRecords { get; set; } // Toplam kayıt sayısı
+        public int PageNumber { get; set; } // Mevcut sayfa numarası
+        public int PageSize { get; set; } // Sayfa boyutu
+
         public ResponseDto()
         {
-
+                
         }
 
         public ResponseDto(T data, ResultStatus resultStatus = 0, string successMessage = "")

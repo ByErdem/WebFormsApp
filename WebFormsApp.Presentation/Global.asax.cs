@@ -48,6 +48,7 @@ namespace WebFormsApp.Presentation
             builder.RegisterType<HttpManager>().As<IHttpService>().AsSelf().InstancePerLifetimeScope();
             builder.RegisterType<SessionManager>().As<ISessionService>().SingleInstance();
             builder.RegisterType<DBContextEntity>().As<IDBContextEntity>().AsSelf().InstancePerLifetimeScope();
+            builder.RegisterType<StudentManager>().As<IStudentService>().AsSelf().InstancePerLifetimeScope();
 
 
             builder.RegisterControllers(typeof(Global).Assembly);
