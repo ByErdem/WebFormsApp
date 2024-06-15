@@ -206,8 +206,8 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="libman.json" />
-    <Content Include="Files\ReadMe.pdf" />
     <Content Include="Files\NetCad.bacpac" />
+    <Content Include="Files\ReadMe.pdf" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
