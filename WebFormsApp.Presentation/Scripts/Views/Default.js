@@ -201,7 +201,7 @@ function renderTable(data) {
         $.ajax({
             type: "POST",
             url: "Default.aspx/Delete",
-            data: JSON.stringify({ id: id }),
+            data: JSON.stringify({ Id: id }),
             contentType: "application/json; charset=utf-8",
             dataType: "json",
             success: function (response) {

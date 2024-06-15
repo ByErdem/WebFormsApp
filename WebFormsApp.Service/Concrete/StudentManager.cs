@@ -72,7 +72,7 @@ namespace WebFormsApp.Service.Concrete
             .Skip((pageNumber - 1) * pageSize)
             .Take(pageSize);
 
-           
+
             rsp.Data = _mapper.Map<List<StudentDto>>(pagedStudents);
             rsp.ResultStatus = ResultStatus.Success;
             rsp.SuccessMessage = "Veriler listelendi";
@@ -133,18 +133,41 @@ namespace WebFormsApp.Service.Concrete
         {
             var rsp = new ResponseDto<bool>();
             var student = _entity.Students.FirstOrDefault(x => x.UniqueId == dto.UniqueId);
-            if(student!=null)
+            if (student != null)
             {
                 student.UniqueId = dto.UniqueId;
                 student.FirstName = dto.FirstName;
                 student.LastName = dto.LastName;
                 student.PlaceOfBirth = dto.PlaceOfBirth;
                 student.BirthDate = dto.BirthDate;
-                await _entity.SaveChangesAsync();
+                _entity.SaveChanges();
 
                 rsp.Data = true;
                 rsp.ResultStatus = ResultStatus.Success;
                 rsp.SuccessMessage = "Değişiklikler başarıyla kaydedildi";
+            }
+            else
+            {
+                rsp.Data = false;
+                rsp.ResultStatus = ResultStatus.Error;
+                rsp.ErrorMessage = "Hata oluştu";
+            }
+
+            return rsp;
+        }
+
+        public async Task<ResponseDto<bool>> Delete(int Id)
+        {
+            var rsp = new ResponseDto<bool>();
+            var user = _entity.Students.FirstOrDefault(x => x.Id == Id);
+            if(user!=null)
+            {
+                _entity.Students.Remove(user);
+                _entity.SaveChanges();
+
+                rsp.Data = true;
+                rsp.ResultStatus = ResultStatus.Success;
+                rsp.SuccessMessage = "Öğrenci kaydı başarıyla silindi.";
             }
             else
             {

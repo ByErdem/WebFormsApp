@@ -50,6 +50,14 @@ namespace WebFormsApp.Presentation
             return rsp;
         }
 
+        [WebMethod]
+        public static async Task<ResponseDto<bool>> Delete(int Id)
+        {
+            var instance = GetInstance();
+            var rsp = await instance._studentService.Delete(Id);
+            return rsp;
+        }
+
         protected void Page_Load(object sender, EventArgs e)
         {
 

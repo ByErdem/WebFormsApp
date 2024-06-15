@@ -13,5 +13,6 @@ namespace WebFormsApp.Service.Abstract
         Task<ResponseDto<List<StudentDto>>> GetStudents(StudentDto dto, int pageNumber, int pageSize);
         Task<ResponseDto<bool>> Add(StudentDto dto);
         Task<ResponseDto<bool>> Update(StudentDto dto);
+        Task<ResponseDto<bool>> Delete(int Id);
     }
 }
