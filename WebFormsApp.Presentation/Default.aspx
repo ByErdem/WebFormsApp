@@ -16,7 +16,7 @@
             <button type="button" class="btn btn-success mt-3 mb-3" id="openNewRecordModalBtn">Create New Student</button>
         </div>
 
-        <%-- Örnek Düzeltme --%>
+        <%-- Örnek Düzeltme xxx --%>
 
         <div style="border: 1px solid rgba(0,0,0,0.1); border-radius: 10px; margin-top: 20px; padding:10px; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);">
             <div class="row">
